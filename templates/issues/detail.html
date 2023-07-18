@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Issue {{issue.id}}{% endblock title %}
+
+{% block content %}
+    <h1>Issue {{issue.title}}  | {{issue.priority}}</h1>
+    <p>{{issue.description}}</p>
+    <br><br>
+
+    <p>{{issue.created_on}}  || {{issue.status}}</p>
+{% endblock content %}

@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 
-class role(models.Model):
+class Role(models.Model):
     name = models.CharField(max_length=128)
     description = models.CharField(max_length=256)
 
@@ -20,7 +20,7 @@ class Team(models.Model):
 
 class CustomUser(AbstractUser):
     role = models.ForeignKey(
-        role,
+        Role,
         on_delete=models.CASCADE,
         null=True,
         blank=True
